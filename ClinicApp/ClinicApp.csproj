@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5DF34CB3-4AB9-4EA5-AE47-E3B9807BE4B2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ClinicApp</RootNamespace>
+    <AssemblyName>ClinicApp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BadDrugs.cs" />
+    <Compile Include="BadDrugsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BadDrugsForm.Designer.cs">
+      <DependentUpon>BadDrugsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClinicDataSet.cs">
+      <DependentUpon>ClinicDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClinicDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClinicDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClinicModel.cs" />
+    <Compile Include="Diagnoses.cs" />
+    <Compile Include="Doctors.cs" />
+    <Compile Include="DoctorsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorsForm.Designer.cs">
+      <DependentUpon>DoctorsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Drugs.cs" />
+    <Compile Include="DrugsComponents.cs" />
+    <Compile Include="DrugsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DrugsForm.Designer.cs">
+      <DependentUpon>DrugsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DrugsList.cs" />
+    <Compile Include="EmploymentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmploymentForm.Designer.cs">
+      <DependentUpon>EmploymentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HistoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HistoryForm.Designer.cs">
+      <DependentUpon>HistoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="History.cs" />
+    <Compile Include="Ingredients.cs" />
+    <Compile Include="Patients.cs" />
+    <Compile Include="PatientsForDoctorsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientsForDoctorsForm.Designer.cs">
+      <DependentUpon>PatientsForDoctorsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientsForm.Designer.cs">
+      <DependentUpon>PatientsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Persons.cs" />
+    <Compile Include="PersonsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonsForm.Designer.cs">
+      <DependentUpon>PersonsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SpecialAccount.cs" />
+    <Compile Include="SpecialAccountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpecialAccountForm.Designer.cs">
+      <DependentUpon>SpecialAccountForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Specialization.cs" />
+    <Compile Include="SpecializationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpecializationForm.Designer.cs">
+      <DependentUpon>SpecializationForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BadDrugsForm.resx">
+      <DependentUpon>BadDrugsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorsForm.resx">
+      <DependentUpon>DoctorsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DrugsForm.resx">
+      <DependentUpon>DrugsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmploymentForm.resx">
+      <DependentUpon>EmploymentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HistoryForm.resx">
+      <DependentUpon>HistoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientsForDoctorsForm.resx">
+      <DependentUpon>PatientsForDoctorsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientsForm.resx">
+      <DependentUpon>PatientsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonsForm.resx">
+      <DependentUpon>PersonsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SpecialAccountForm.resx">
+      <DependentUpon>SpecialAccountForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpecializationForm.resx">
+      <DependentUpon>SpecializationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClinicDataSet.xsc">
+      <DependentUpon>ClinicDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ClinicDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ClinicDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClinicDataSet.xss">
+      <DependentUpon>ClinicDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\BadDrugs.datasource" />
+    <None Include="Properties\DataSources\Diagnoses.datasource" />
+    <None Include="Properties\DataSources\Doctors.datasource" />
+    <None Include="Properties\DataSources\Drugs.datasource" />
+    <None Include="Properties\DataSources\DrugsComponents.datasource" />
+    <None Include="Properties\DataSources\DrugsList.datasource" />
+    <None Include="Properties\DataSources\History.datasource" />
+    <None Include="Properties\DataSources\Ingredients.datasource" />
+    <None Include="Properties\DataSources\Patients.datasource" />
+    <None Include="Properties\DataSources\Persons.datasource" />
+    <None Include="Properties\DataSources\SpecialAccount.datasource" />
+    <None Include="Properties\DataSources\Specialization.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>
